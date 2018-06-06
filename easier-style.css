@@ -1,0 +1,83 @@
+/*** BEGIN Required Specifications ***/
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777;
+    background: #777;
+    width: 960px;
+    font-size: 18px;
+}
+header, nav, aside, section, footer {
+    background: #ebebeb;
+}
+article {
+    color: #ebebeb;
+    background: #777;
+}
+#h1, #paragraph {
+    color: #777;
+    background: #ebebeb;
+}
+section {
+    width: 495px;
+}
+/*** END Required Specifications ***/
+
+/* Additional properties */
+header, nav, footer {
+    padding: 1em;
+    text-align: center;
+    margin-bottom: .5em;
+}
+#container {
+    width: 100%;
+    /* overflow: auto; */
+    clear: both;
+    margin-bottom: .5em;
+    background: #777;
+}
+section {
+    float: left;
+    text-align: center;
+    padding: 1em .5em .5em;
+    margin-bottom: .5em;
+}
+aside {
+    padding: 1em;
+    text-align: center;
+
+    /* ***NOTE***
+     * Seems like there should be an approach here
+     * where 'aside' would simply take up the remaining
+     * space alongside 'section'. 
+     * I could get it to do that, by deleting:
+     *   float: right; 
+     *   width: 400px;
+     * But then I could not find a way to get a 
+     * space between 'section' and 'aside'. I tried
+     * LOTS of things. Nothing worked.
+     */
+    float: right;
+    width: 400px;
+
+    /* ***NOTE***
+     * This will set the height to match the
+     * height of 'section'.
+     * BUT... there's got to be a better way.
+     */
+    height: 191px;
+}
+article {
+    margin-top: 1em;
+    padding: 1em;
+}
+#h1 {
+    padding: .5em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+#paragraph {
+    padding: .5em;
+}
+footer {
+    clear: both;
+}
