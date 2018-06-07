@@ -28,9 +28,16 @@ header, nav, footer {
     text-align: center;
     margin-bottom: .5em;
 }
+.clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
 #container {
     width: 100%;
-    /* overflow: auto; */
+    overflow: auto;
     clear: both;
     margin-bottom: .5em;
     background: #777;
@@ -39,7 +46,6 @@ section {
     float: left;
     text-align: center;
     padding: 1em .5em .5em;
-    margin-bottom: .5em;
 }
 aside {
     padding: 1em;
@@ -56,6 +62,7 @@ aside {
      * space between 'section' and 'aside'. I tried
      * LOTS of things. Nothing worked.
      */
+    /* This works */
     float: right;
     width: 400px;
 
@@ -64,7 +71,7 @@ aside {
      * height of 'section'.
      * BUT... there's got to be a better way.
      */
-    height: 191px;
+     height: 191px;
 }
 article {
     margin-top: 1em;
